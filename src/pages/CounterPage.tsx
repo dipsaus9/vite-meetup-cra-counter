@@ -1,4 +1,5 @@
 import { lazy } from 'react';
+import { Title } from '../components/Title';
 
 const Counter = lazy(() =>
 	import('../components/Counter').then((component) => ({
@@ -9,8 +10,12 @@ const Counter = lazy(() =>
 export function CounterPage() {
 	return (
 		<div>
-			<h1>CounterPage</h1>;
-			<Counter />
+			<Title>CounterPage</Title>
+			{Array.from(Array(50))
+				.fill(null)
+				.map((_, key) => (
+					<Counter key={key} />
+				))}
 		</div>
 	);
 }

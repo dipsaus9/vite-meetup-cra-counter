@@ -20,7 +20,7 @@ function App() {
 		<div className="App">
 			<header className="App-header">
 				<img src={logo} className="App-logo" alt="logo" />
-				<p>Hello Vite + React!</p>
+				<p>Hello CRA + React!</p>
 				<nav>
 					<ul>
 						<li>
@@ -31,14 +31,13 @@ function App() {
 						</li>
 					</ul>
 				</nav>
-				<div>
-					<Suspense fallback={null}>
-						<Routes>
-							<Route path="/" element={<Home />} />
-							<Route path="/counter" element={<CounterPage />} />
-						</Routes>
-					</Suspense>
-				</div>
+
+				<Suspense fallback={null}>
+					<Routes>
+						<Route path="/" element={<Home />} />
+						<Route path="/counter" element={<CounterPage />} />
+					</Routes>
+				</Suspense>
 			</header>
 		</div>
 	);
