@@ -3,6 +3,7 @@ import './App.css';
 
 import { Routes, Route, Link } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
+
 const Home = lazy(() =>
 	import('./pages/Home').then((component) => ({
 		default: component.Home,
